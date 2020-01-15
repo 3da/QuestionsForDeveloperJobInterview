@@ -1,37 +1,31 @@
-## Welcome to GitHub Pages
+# Вопросы для собеседования на позицию разработчика
 
-You can use the [editor on GitHub](https://github.com/3da/QuestionsForDeveloperJobInterview/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+## Общие вопросы
+1. Как проверить является ли число чётным?
+2. Что такое хвостовая рекурсия?
+3. Что предпочтительнее, наследование или композиция? Почему?
+4. В чём отличие мьютекса от семафора?
+5. Асинхронность и многопоточность. Какая связь между этими словами?
+
+
+## Вопросы по C#
+
+1. В каких случаях использовать StringBuilder, а в каких конкатенацию строк?
+2. Плюсы и минусы static переменных. 
+3. Что такое ORM (Object-Relational Mapping)? Что такое Entity Framework?
+4. Когда лучше использовать HashSet<string>, а когда List<string>? (Для добавления, удаления, Contains)
+5. Чем отличается struct от class?
+6. Для чего предназначено ключевое слово volatile?
+7. Как работает Try-Catch-Finally?
+8. Как работает using?
+9. В чём разница между абстрактным классом и интерфейсом? Что использовать предпочтительнее?
+10. Для чего используются атрибуты в C#? Как добавить собственный атрибут и обработать его?
+11. Что такое синглтон?
+12. Какие существуют потокобезопасные коллекции?
+
+### Комплексные вопросы
+1. Каким образом реализовать систему плагинов на C#? Как сделать чтобы плагины не влияли на основное приложение? Как добавить использование языков отличных от C#?
+2. Каким образом решить проблему того, что приложение на C# выполняется медленно? А если потребляет много оперативной памяти?
 
 Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/3da/QuestionsForDeveloperJobInterview/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
