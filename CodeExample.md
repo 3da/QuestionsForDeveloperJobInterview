@@ -1,6 +1,33 @@
 # C#
 
+
 ## 1
+
+```C#
+public string ReadFirstLine(string path)
+{
+    var file = new StreamReader(path);
+    return file.ReadLine();
+}
+
+```
+
+
+
+
+## 2
+
+```C#
+if (result < 3)
+    return true;
+else
+    return false;
+
+```
+
+
+## 3
+
 ```C#
 try
 {
@@ -14,25 +41,15 @@ catch (Exception ex)
 
 ```
 
+## 4
 
-
-
-
-
-## 2
 ```C#
-if (result < 3)
-       return true;
-else
-       return false;
-
-```
-
-## 3
-```C#
-public string ReadFirstLine(string path)
+public Task<string> ReadFirstLine(string path)
 {
-  var file = new StreamReader(path);
-  return file.ReadLine();
+    using (var file = new StreamReader(path))
+    {
+        return file.ReadLineAsync();
+    }
 }
+
 ```
