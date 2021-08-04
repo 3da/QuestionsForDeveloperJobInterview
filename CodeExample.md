@@ -25,7 +25,6 @@ public string ReadFirstLine(string path)
 
 
 
-
 ## 3
 
 ```C#
@@ -40,6 +39,19 @@ else
 ## 4
 
 ```C#
+public static IEnumerable<User> Filter(IEnumerable<User> users, string email, int? minAge)
+{
+    return users.Where(q =>
+        (q.Email == email || email == null)
+        && (minAge == null || q.Age >= minAge.Value));
+}
+
+```
+
+
+## 5
+
+```C#
 try
 {
     //some code
@@ -52,7 +64,7 @@ catch (Exception ex)
 
 ```
 
-## 5
+## 6
 
 ```C#
 public Task<string> ReadFirstLine(string path)
@@ -65,7 +77,7 @@ public Task<string> ReadFirstLine(string path)
 
 ```
 
-## 5
+## 7
 
 ```C#
 public void Process(User[] users)
