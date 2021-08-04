@@ -140,7 +140,7 @@ public async Task UpdateAsync(User user)
 ```C#
 public bool ValidateUser(User user)
 {
-    return CheckUserExist(user.Name)
+    return !CheckUserExist(user.Name)
         && _emailRegex.IsMatch(user.Email ?? "")
         && !string.IsNullOrWhiteSpace(user.FirstName)
         && !string.IsNullOrWhiteSpace(user.SecondName);
