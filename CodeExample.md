@@ -53,3 +53,29 @@ public Task<string> ReadFirstLine(string path)
 }
 
 ```
+
+## 5
+
+```C#
+public void Process()
+{
+    var allEmails = users.Select(q => q.Email).ToArray();
+
+    var filteredEmails = FilterBadEmails(allEmails);
+
+    var sortedEmails = filteredEmails.OrderBy(q => q).ToArray();
+    
+    //some code
+}
+
+public string[] FilterBadEmails(string[] emails)
+{
+    return emails.Where(CheckEmail).ToArray();
+}
+
+public bool CheckEmail(string email)
+{
+    //some code
+}
+
+```
