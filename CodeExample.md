@@ -1,7 +1,18 @@
 # C#
-
-
 ## 1
+
+```C#
+public string[] Filter(string[] words)
+{
+    var filtered = words.Where(w => w.Length > 5 && w.StartsWith("а"));
+    _logger.LogInformation("{count}", filtered.Count());
+    return filtered.ToArray();
+}
+
+```
+
+
+## 2
 
 ```C#
 public string ReadFirstLine(string path)
@@ -15,7 +26,7 @@ public string ReadFirstLine(string path)
 
 
 
-## 2
+## 3
 
 ```C#
 if (result < 3)
@@ -26,7 +37,7 @@ else
 ```
 
 
-## 3
+## 4
 
 ```C#
 try
@@ -41,7 +52,7 @@ catch (Exception ex)
 
 ```
 
-## 4
+## 5
 
 ```C#
 public Task<string> ReadFirstLine(string path)
@@ -57,7 +68,7 @@ public Task<string> ReadFirstLine(string path)
 ## 5
 
 ```C#
-public void Process()
+public void Process(User[] users)
 {
     var allEmails = users.Select(q => q.Email).ToArray();
 
