@@ -2,6 +2,17 @@
 ## 1
 
 ```C#
+public string GetUserNameWithEmail(User[] users)
+{
+    var user = users.FirstOrDefault(q => q.Email != null);
+    return user.Name;
+}
+
+```
+
+## 2
+
+```C#
 public string[] Filter(string[] words)
 {
     var filtered = words.Where(w => w.Length > 5 && w.StartsWith("а"));
@@ -12,7 +23,7 @@ public string[] Filter(string[] words)
 ```
 
 
-## 2
+## 3
 
 ```C#
 public string ReadFirstLine(string path)
@@ -25,7 +36,7 @@ public string ReadFirstLine(string path)
 
 
 
-## 3
+## 4
 
 ```C#
 if (result < 3)
@@ -36,10 +47,10 @@ else
 ```
 
 
-## 4
+## 5
 
 ```C#
-public static IEnumerable<User> Filter(IEnumerable<User> users, string email, int? minAge)
+public IEnumerable<User> Filter(IEnumerable<User> users, string email, int? minAge)
 {
     return users.Where(q =>
         (q.Email == email || email == null)
@@ -49,7 +60,7 @@ public static IEnumerable<User> Filter(IEnumerable<User> users, string email, in
 ```
 
 
-## 5
+## 6
 
 ```C#
 try
@@ -64,7 +75,7 @@ catch (Exception ex)
 
 ```
 
-## 6
+## 7
 
 ```C#
 public Task<string> ReadFirstLine(string path)
@@ -77,7 +88,7 @@ public Task<string> ReadFirstLine(string path)
 
 ```
 
-## 7
+## 8
 
 ```C#
 public void Process(User[] users)
@@ -99,6 +110,27 @@ public string[] FilterBadEmails(string[] emails)
 public bool CheckEmail(string email)
 {
     //some code
+}
+
+```
+
+## 9
+
+```C#
+private readonly SemaphoreSlim _semaphore = new SemaphoreSlim(1, 1);
+
+public async Task UpdateAsync(User user)
+{
+    await _semaphore.WaitAsync();
+
+    if (!Validate(user))
+    {
+        throw new Exception("User is not valid")
+    }
+    
+    //some code
+
+    _semaphore.Release();
 }
 
 ```
