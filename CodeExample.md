@@ -146,3 +146,22 @@ public bool ValidateUser(User user)
         && !string.IsNullOrWhiteSpace(user.SecondName);
 }
 ```
+
+## 11
+
+```C#
+internal class TokenValidator
+{
+    string[] _tokens;
+
+    async Task InitializeAsync()
+    {
+        _tokens = await File.ReadAllLinesAsync("tokens.txt");
+    }
+
+    bool CheckToken(string token)
+    {
+        return _tokens.Contains(token);
+    }
+}
+```
