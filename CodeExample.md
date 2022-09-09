@@ -150,7 +150,7 @@ public bool ValidateUser(User user)
 ## 11
 
 ```C#
-internal class TokenValidator
+public class TokenValidator
 {
     string[] _tokens;
 
@@ -159,7 +159,7 @@ internal class TokenValidator
         _tokens = await File.ReadAllLinesAsync("tokens.txt");
     }
 
-    bool CheckToken(string token)
+    public bool CheckToken(string token)
     {
         return _tokens.Contains(token);
     }
